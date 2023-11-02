@@ -16,3 +16,9 @@ block content
           h4 birdName: #{item.birdName}
           p birdPrice: $#{item.birdPrice}
           p birdColor: #{item.birdColor}
+
+  script.
+    function buy(index) {
+      alert(`You purchased item ${index+1}.`);
+    }
+     
