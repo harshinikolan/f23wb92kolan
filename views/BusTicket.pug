@@ -1,0 +1,10 @@
+extends layout 
+
+block content 
+  h1= title 
+  - var BusTicket=[{BusTicket_passengerName:"Reddy",BusTicket_ticketNumber:1405,BusTicket_seatNumber:407},{BusTicket_passengerName:"Kolan",BusTicket_ticketNumber:1409,BusTicket_seatNumber:410},{BusTicket_passengerName:"Harshini",BusTicket_ticketNumber:1411,BusTicket_seatNumber:412}]
+  div(class="container-fluid")
+  div(class="row")
+   each f,index in BusTicket
+    div(class="col-sm-2" onclick =`buy(${index})`) #{f.BusTicket_passengerName}, #{f.BusTicket_ticketNumber}, #{f.BusTicket_seatNumber}
+  
